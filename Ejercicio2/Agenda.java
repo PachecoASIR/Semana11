@@ -1,6 +1,7 @@
 package Ejercicio2;
 
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Agenda {
     public static void main(String[] args) {
@@ -12,6 +13,8 @@ public class Agenda {
         int edad;
 
         Perfil usuarios [] = new Perfil[2];
+
+        try{
 
         for(int i=0; i<usuarios.length;i++) {
 
@@ -25,13 +28,18 @@ public class Agenda {
             edad = entrada.nextInt();
 
             usuarios [i] = new Perfil(nombre,apellido,edad);
+            }
         }
+        catch (InputMismatchException ex) {
+            ex.printStackTrace();
+            System.out.println(ex.getMessage());
+            }
 
        for(int i=0; i<usuarios.length;i++){
-            System.out.println("Nombre: "+ usuarios[i].getNombre());
+            System.out.println("Nombre: " + usuarios[i].getNombre());
             System.out.println("Apellido: " + usuarios[i].getApellido());
             System.out.println("Edad: "+ usuarios[i].getEdad());
-            System.out.println("---------------------------------------------------------");
+            System.out.println("---------------------------------------------------------");  
         }
     }
 }
