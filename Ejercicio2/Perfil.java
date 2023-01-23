@@ -6,9 +6,9 @@ package Ejercicio2;
         private String apellido;
         private int edad;
 
-        public Perfil(String nombre, String apellidos, int edad){
-            this.nombre =nombre;
-            this.apellido=apellido;
+        public Perfil(String nombre, String apellido, int edad){
+            this.nombre = nombre;
+            this.apellido = apellido;
             this.edad = edad; 
         }
 
