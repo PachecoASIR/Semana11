@@ -26,6 +26,7 @@ public class Agenda {
 
             System.out.println("Ingresa tu edad: ");
             edad = entrada.nextInt();
+            entrada.nextLine();
 
             usuarios [i] = new Perfil(nombre,apellido,edad);
             }
